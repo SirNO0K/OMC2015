@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ERPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ADDRBOOK">
+          <Key>
+            <PropertyRef Name="ADDB_KEY" />
+          </Key>
+          <Property Name="ADDB_KEY" Type="int" Nullable="false" />
+          <Property Name="ADDB_COMPANY" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ADDB_BRANCH" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_TAX_ID" Type="char" MaxLength="13" />
+          <Property Name="ADDB_ADDB_1" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_ADDB_2" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_ADDB_3" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_PROVINCE" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_POST" Type="char" MaxLength="5" />
+          <Property Name="ADDB_PHONE" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_FAX" Type="varchar" MaxLength="30" />
+          <Property Name="ADDB_WEBSITE" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_BT" Type="int" Nullable="false" />
+          <Property Name="ADDB_STA" Type="int" Nullable="false" />
+          <Property Name="ADDB_REMARK" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_SEARCH" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_EMAIL" Type="varchar" MaxLength="60" />
+          <Property Name="ADDB_CONNECT" Type="int" />
+          <Property Name="ADDB_GPS_LAT_S" Type="varchar" MaxLength="20" />
+          <Property Name="ADDB_GPS_LONG_S" Type="varchar" MaxLength="20" />
+          <Property Name="ADDB_LASTUPD" Type="varchar" MaxLength="17" />
+        </EntityType>
+        <EntityContainer Name="ERPModelStoreContainer">
+          <EntitySet Name="ADDRBOOK" EntityType="Self.ADDRBOOK" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ERPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ADDRBOOK">
+          <Key>
+            <PropertyRef Name="ADDB_KEY" />
+          </Key>
+          <Property Name="ADDB_KEY" Type="Int32" Nullable="false" />
+          <Property Name="ADDB_COMPANY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ADDB_BRANCH" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_TAX_ID" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+          <Property Name="ADDB_ADDB_1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_ADDB_2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_ADDB_3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_PROVINCE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_POST" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ADDB_PHONE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_FAX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_WEBSITE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_BT" Type="Int32" Nullable="false" />
+          <Property Name="ADDB_STA" Type="Int32" Nullable="false" />
+          <Property Name="ADDB_REMARK" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_SEARCH" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_CONNECT" Type="Int32" />
+          <Property Name="ADDB_GPS_LAT_S" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_GPS_LONG_S" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ADDB_LASTUPD" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="ERP" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ADDRBOOKs" EntityType="Self.ADDRBOOK" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ERPModelStoreContainer" CdmEntityContainer="ERP">
+          <EntitySetMapping Name="ADDRBOOKs">
+            <EntityTypeMapping TypeName="ERPModel.ADDRBOOK">
+              <MappingFragment StoreEntitySet="ADDRBOOK">
+                <ScalarProperty Name="ADDB_KEY" ColumnName="ADDB_KEY" />
+                <ScalarProperty Name="ADDB_COMPANY" ColumnName="ADDB_COMPANY" />
+                <ScalarProperty Name="ADDB_BRANCH" ColumnName="ADDB_BRANCH" />
+                <ScalarProperty Name="ADDB_TAX_ID" ColumnName="ADDB_TAX_ID" />
+                <ScalarProperty Name="ADDB_ADDB_1" ColumnName="ADDB_ADDB_1" />
+                <ScalarProperty Name="ADDB_ADDB_2" ColumnName="ADDB_ADDB_2" />
+                <ScalarProperty Name="ADDB_ADDB_3" ColumnName="ADDB_ADDB_3" />
+                <ScalarProperty Name="ADDB_PROVINCE" ColumnName="ADDB_PROVINCE" />
+                <ScalarProperty Name="ADDB_POST" ColumnName="ADDB_POST" />
+                <ScalarProperty Name="ADDB_PHONE" ColumnName="ADDB_PHONE" />
+                <ScalarProperty Name="ADDB_FAX" ColumnName="ADDB_FAX" />
+                <ScalarProperty Name="ADDB_WEBSITE" ColumnName="ADDB_WEBSITE" />
+                <ScalarProperty Name="ADDB_BT" ColumnName="ADDB_BT" />
+                <ScalarProperty Name="ADDB_STA" ColumnName="ADDB_STA" />
+                <ScalarProperty Name="ADDB_REMARK" ColumnName="ADDB_REMARK" />
+                <ScalarProperty Name="ADDB_SEARCH" ColumnName="ADDB_SEARCH" />
+                <ScalarProperty Name="ADDB_EMAIL" ColumnName="ADDB_EMAIL" />
+                <ScalarProperty Name="ADDB_CONNECT" ColumnName="ADDB_CONNECT" />
+                <ScalarProperty Name="ADDB_GPS_LAT_S" ColumnName="ADDB_GPS_LAT_S" />
+                <ScalarProperty Name="ADDB_GPS_LONG_S" ColumnName="ADDB_GPS_LONG_S" />
+                <ScalarProperty Name="ADDB_LASTUPD" ColumnName="ADDB_LASTUPD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
