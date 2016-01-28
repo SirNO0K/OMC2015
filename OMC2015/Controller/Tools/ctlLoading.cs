@@ -34,7 +34,7 @@ namespace OMC2015.Controller.Tools
                 {
                     Message.Text = "Loading Error...";
                     Message.TextError = Ex.ToString();
-                    Message.ShowDialog();
+                    Message.ShowDialog();                    
                 }
             }
         }
