@@ -55,12 +55,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtPicturePath = new System.Windows.Forms.TextBox();
-            this.txtCompanyName = new System.Windows.Forms.TextBox();
-            this.btnFindPicturePath = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnFindPicturePath = new System.Windows.Forms.Button();
+            this.txtCompanyName = new System.Windows.Forms.TextBox();
+            this.txtPicturePath = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -317,7 +317,7 @@
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnSave.Size = new System.Drawing.Size(110, 35);
             this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Update";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
             // 
@@ -355,52 +355,6 @@
             this.tabControl1.Size = new System.Drawing.Size(581, 234);
             this.tabControl1.TabIndex = 12;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.Location = new System.Drawing.Point(30, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Picture Path :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label7.Location = new System.Drawing.Point(30, 34);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Company Name :";
-            // 
-            // txtPicturePath
-            // 
-            this.txtPicturePath.Location = new System.Drawing.Point(250, 65);
-            this.txtPicturePath.Name = "txtPicturePath";
-            this.txtPicturePath.Size = new System.Drawing.Size(245, 24);
-            this.txtPicturePath.TabIndex = 11;
-            // 
-            // txtCompanyName
-            // 
-            this.txtCompanyName.Location = new System.Drawing.Point(250, 34);
-            this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(285, 24);
-            this.txtCompanyName.TabIndex = 12;
-            // 
-            // btnFindPicturePath
-            // 
-            this.btnFindPicturePath.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnFindPicturePath.Location = new System.Drawing.Point(501, 64);
-            this.btnFindPicturePath.Name = "btnFindPicturePath";
-            this.btnFindPicturePath.Size = new System.Drawing.Size(34, 23);
-            this.btnFindPicturePath.TabIndex = 10;
-            this.btnFindPicturePath.Tag = "PicturePath";
-            this.btnFindPicturePath.Text = "...";
-            this.btnFindPicturePath.UseVisualStyleBackColor = true;
-            this.btnFindPicturePath.Click += new System.EventHandler(this.SelectItem);
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.btnFindPicturePath);
@@ -415,6 +369,52 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "General Information";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnFindPicturePath
+            // 
+            this.btnFindPicturePath.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnFindPicturePath.Location = new System.Drawing.Point(501, 64);
+            this.btnFindPicturePath.Name = "btnFindPicturePath";
+            this.btnFindPicturePath.Size = new System.Drawing.Size(34, 23);
+            this.btnFindPicturePath.TabIndex = 10;
+            this.btnFindPicturePath.Tag = "PicturePath";
+            this.btnFindPicturePath.Text = "...";
+            this.btnFindPicturePath.UseVisualStyleBackColor = true;
+            this.btnFindPicturePath.Click += new System.EventHandler(this.SelectItem);
+            // 
+            // txtCompanyName
+            // 
+            this.txtCompanyName.Location = new System.Drawing.Point(250, 34);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(285, 24);
+            this.txtCompanyName.TabIndex = 12;
+            // 
+            // txtPicturePath
+            // 
+            this.txtPicturePath.Location = new System.Drawing.Point(250, 65);
+            this.txtPicturePath.Name = "txtPicturePath";
+            this.txtPicturePath.Size = new System.Drawing.Size(245, 24);
+            this.txtPicturePath.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label7.Location = new System.Drawing.Point(30, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 17);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Company Name :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.Location = new System.Drawing.Point(30, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 17);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Picture Path :";
             // 
             // frmConfig
             // 
